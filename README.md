@@ -19,3 +19,5 @@ Goal test: check if the robot is in the goal (e.g., (8,8)).
 Path cost: Each standard movement cost is 1 but if the robot enters the barrier point, the cost is 200. Hence, the path cost is the sum of all movement costs.
 
 Heuristic (for A* search): Chebysev distance between the current position of the robot and the goal.
+
+![UCS search](https://user-images.githubusercontent.com/53122798/192971488-568112f3-5b35-4fe2-a3cb-fef6027908fe.png)
