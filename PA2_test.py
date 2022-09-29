@@ -2,7 +2,7 @@
 #Topic: finding a shortest path for a robot vacuum in an 8x8 grid board
 
 import matplotlib.pyplot as plt
-from PA2_search import *
+from path_search import *
 
 # Occupy a barrier on the grid
 barrier = []
