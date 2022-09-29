@@ -12,7 +12,7 @@ States: positions (Cartesian coordinates) of the robot on the grid.
 
 Initial state: a start position of the robot (e.g., (1,1)).
 
-Actions: left, right, up, down, and diagonal  8 possible movements.
+Actions: left, right, up, down, and diagonal -> 8 possible movements.
 
 Goal test: check if the robot is in the goal (e.g., (8,8)).
 
