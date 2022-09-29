@@ -1,6 +1,3 @@
-#Author: Nguyen Anh Tu, Dinh-Mao Bui
-#Topic: finding a shortest path for a robot vacuum in an 8x8 grid board
-
 def heuristic(pos, goal):
     # Compute the Chebyshev distance from current position to the goal. 
     # Use the Chebyshev distance as a heuristic which allows our robot 
@@ -50,7 +47,7 @@ def move_cost(next_node, barrier):
 
 
 def UCSearch(start, goal, barrier):
-    # Implementation of Unoform-Cost Search (2 points)
+    # Implementation of Unoform-Cost Search
     """
     Args: 
         start: coordinate of start node
@@ -105,19 +102,7 @@ def UCSearch(start, goal, barrier):
             path.reverse()
             return path, expandedNodes, G[goal] #Done!
 
-        ############################################################################################
-        ##                                  START OF YOUR CODE                                    ##
-        ############################################################################################
-        ## TODO:                                                                                   #
-        ## Complete the remaining part from here. Specifically, if the current node is not the goal#
-        ## state, then mark the current node as expanded (or processed, or visited). Then, go and  #
-        ## check each neighbor of the current node using get_neighbors() function. Subsequently,   #
-        ## calculate the path cost of the neigbor (using move_cost() function). Put the neighbor   #
-        ## into the fringe and update the following: the value of its path cost to the set G; its  #
-        ## parent's corrdinate (parent is the current node). Note that, in case any neighbor was   #
-        ## already in fringe, we will only update the value of path cost and its parent if the     #
-        ## current path cost is less than the previous path cost of the same neighbor.             #
-        ############################################################################################
+
 
         # This part was done first because it's easier than A*
         else:
@@ -142,16 +127,13 @@ def UCSearch(start, goal, barrier):
             # For new iteration I clean data of curNode
             curNode = None
 
-        ###########################################################################################
-        ##                                   END OF YOUR CODE                                    ##
-        ###########################################################################################
             
     raise RuntimeError("UCS failed to find a solution")
     
 
 
 def aStarSearch(start, goal, barrier):
-    # Implementation of A Star Search (3 points)
+    # Implementation of A Star Search
     """
     Args: 
         start: coordinate of start node
@@ -209,20 +191,6 @@ def aStarSearch(start, goal, barrier):
             path.reverse()
             return path, expandedNodes, F[goal] #Done!
         
-        ############################################################################################
-        ##                                  START OF YOUR CODE                                    ##
-        ############################################################################################
-        ## TODO:                                                                                   #
-        ## Complete the remaining part from here. Specifically, if the current node is not the goal#
-        ## state, then mark the current node as expanded (or processed, or visited). Then, go and  #
-        ## check each neighbor of the current node using get_neighbors() function. Subsequently,   #
-        ## calculate the path cost and total cost of the neigbor (using move_cost() function). Put # 
-        ## the neighbor into the fringe and update the following: value of its path cost to set G; #
-        ## value of its total cost to set F (using heuristic() function); its parent's corrdinate  #
-        ## (the current node is the parent). Note that, in case the neighbor was already in fringe,# 
-        ## we will only update the values and its parent if the current path cost is less than the #
-        ## previous path cost of this neighbor node.                                               #
-        ############################################################################################
 
         # This part was done after UCS, most comments are the same
         else:
@@ -250,8 +218,4 @@ def aStarSearch(start, goal, barrier):
                         F[x] = G[x] + heuristic(x, goal)
             curNode = None
         
-            
-        ###########################################################################################
-        ##                                   END OF YOUR CODE                                    ##
-        ###########################################################################################
     raise RuntimeError("A* failed to find a solution")
