@@ -21,3 +21,5 @@ Path cost: Each standard movement cost is 1 but if the robot enters the barrier 
 Heuristic (for A* search): Chebysev distance between the current position of the robot and the goal.
 
 ![UCS search](https://user-images.githubusercontent.com/53122798/192971488-568112f3-5b35-4fe2-a3cb-fef6027908fe.png)
+![A* search](https://user-images.githubusercontent.com/53122798/192971624-946b09b2-75b8-4a41-bc40-e98d15a8d449.png)
+
